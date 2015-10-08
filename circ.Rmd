@@ -239,7 +239,7 @@ rose.diag(windc, bins=32, col="darkgrey",
 
 ## Changing the Radii
 
-- I think that the default âradii proportional to countsâ is generally best, but this is not always obvious. The scale certainly makes a big difference however.
+- I think that the default "radii proportional to counts"" is generally best, but this is not always obvious. The scale certainly makes a big difference however.
 ```{r eval=FALSE}
 rose.diag(windc, bins=16, col="darkgrey", radii.scale="linear", cex=1.5, prop=2.4, add=TRUE)
 ```
@@ -322,8 +322,8 @@ points(circular(asin(MDir[1]), units="radians", template="geographics"),
 
 ## Generating Random Points on the Sphere
 
-- Wish to generate a random âdirectionâ in d-dimensions; i.e., an observation from the uniform distribution in the $d-1$ sphere.
-- Usual way: let $X â¼ N_d(0, I)$ and return $U = X/||X||$.
+- Wish to generate a random "direction" in d-dimensions; i.e., an observation from the uniform distribution in the $d-1$ sphere.
+- Usual way: let $X \sim N_d(0, I)$ and return $U = X/||X||$.
 - An alternative rejection sampler:
     - Repeat until $||X|| \leq 1$
         - Let $X$ be uniformly distributed on the cube $[-1,1]^d$
@@ -337,8 +337,6 @@ points(circular(asin(MDir[1]), units="radians", template="geographics"),
 library(ascii)
 accRate <- function(d) ((sqrt(pi)/2)^d)/gamma(d/2 + 1)
 d <- 2:10
-## ar <- matrix(accRate(d), nrow=1,
-##              dimnames=list("accept rate", "d"=d))
 ar <- rbind("dimension"=d, "accept rate (%)"= 100*accRate(d))
 ar <- ascii(ar, digits=0, include.rownames=TRUE, include.colnames=FALSE)
 print(ar)
@@ -375,7 +373,7 @@ runifSphere <- function(n, dimension, method=c("norm", "cube", "slownorm")) {
 }
 ```
 
-## Easy fix for Borelâs paradox in 3-d
+## Easy fix for Borel's paradox in 3-d
 
 Take longitude $\phi \sim U(0,2\pi)$ independent of latitude $\theta = \arcsin(2U-1), U \sim U(0,1)$.
 
@@ -479,13 +477,10 @@ plotPNvLvMF <- function(dimen, lwd=0.75) {
 
 ## $d = 2$
 
-
 ``` {r PNvLvMF2, echo = F}
 par(mar=c(2,2,0,0)+0.1, oma=c(0,0,0,0)+0.1)
 plotPNvLvMF(2)
 ```
-
-
 
 ## $d = 3$
 
@@ -496,7 +491,6 @@ plotPNvLvMF(3)
 
 
 ## $d = 4$
-
 
 ``` {r PNvLvMF4, echo = F}
 par(mar=c(2,2,0,0)+0.1, oma=c(0,0,0,0)+0.1)
