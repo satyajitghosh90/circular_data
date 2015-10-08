@@ -1,8 +1,6 @@
 
 ---
-title: "Analysis of Directional Data"
-date: "(October 8, 2015)"
-output: html_document
+Analysis of Directional Data
 ---
 
 # Introduction
