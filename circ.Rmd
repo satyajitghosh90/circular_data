@@ -477,8 +477,8 @@ plotPNvLvMF <- function(dimen, lwd=0.75) {
     }
 ```
 
-$d = 2$
--------
+## $d = 2$
+
 
 ``` {r PNvLvMF2, echo = F}
 par(mar=c(2,2,0,0)+0.1, oma=c(0,0,0,0)+0.1)
@@ -487,8 +487,7 @@ plotPNvLvMF(2)
 
 
 
-$d = 3$
--------
+## $d = 3$
 
 ``` {r PNvLvMF3, echo = F}
 par(mar=c(2,2,0,0)+0.1, oma=c(0,0,0,0)+0.1)
@@ -496,8 +495,8 @@ plotPNvLvMF(3)
 ```
 
 
-$d = 4$
--------
+## $d = 4$
+
 
 ``` {r PNvLvMF4, echo = F}
 par(mar=c(2,2,0,0)+0.1, oma=c(0,0,0,0)+0.1)
